@@ -1,9 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import Modal from "./utils/Modal";
-import HeroImage from "./images/hero-image.png";
 import { Transition } from "react-transition-group";
-import BahanBaku1 from "./images/furnitur/bahan-baku-1.jpg";
-import BahanBaku2 from "./images/furnitur/bahan-baku-2.jpg";
+import BahanBaku1 from "./images/bahan-baku-1.jpg";
+import BahanBaku2 from "./images/bahan-baku-2.jpg";
 
 function HeroHome() {
   const [videoModalOpen, setVideoModalOpen] = useState(false);
@@ -246,9 +245,9 @@ function HeroHome() {
                   className="w-full h-96"
                   src="https://www.youtube.com/embed/-O5kNPlUV7w"
                   title="YouTube video player"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
+                  allowFullScreen
                 ></iframe>
               </div>
             </Modal>

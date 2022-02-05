@@ -36,6 +36,14 @@
     "gambar": ["03 nakas .png"]
   },
   {
+    "id": 4,
+    "nama": "Meja Rak Single",
+    "dimensi": {},
+    "material": "Besi Cube",
+    "harga": 300000,
+    "gambar": ["04 singlei.png"]
+  },
+  {
     "id": 5,
     "nama": "Rak Susun Berlampu",
     "dimensi": {},
