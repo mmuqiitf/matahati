@@ -1,0 +1,265 @@
+[
+  {
+    "id": 1,
+    "nama": "Stool Kotak",
+    "dimensi": {
+      "tinggi": 50,
+      "panjang": 38,
+      "lebar": 38
+    },
+    "material": "besi hollow 3cm x 3cm",
+    "harga": 300000,
+    "gambar": ["01 stool kotak.png"]
+  },
+  {
+    "id": 2,
+    "nama": "Rak Dinding",
+    "dimensi": {
+      "tinggi": 30,
+      "panjang": 30,
+      "lebar": 16.5
+    },
+    "material": "bracket siku + fischer",
+    "harga": 250000,
+    "gambar": ["02 rak dinding 02.png", "02 rak dinding.png"]
+  },
+  {
+    "id": 3,
+    "nama": "Nakas Single",
+    "dimensi": {
+      "tinggi": 30,
+      "panjang": 30,
+      "lebar": 28.5
+    },
+    "material": "khaki sofa t.7",
+    "harga": 400000,
+    "gambar": ["03 nakas .png"]
+  },
+  {
+    "id": 5,
+    "nama": "Rak Susun Berlampu",
+    "dimensi": {},
+    "material": "Besi Cube",
+    "harga": 2000000,
+    "gambar": ["05 rak susun.png"]
+  },
+  {
+    "id": 6,
+    "nama": "Kursi Santai Selinder",
+    "dimensi": {
+      "tinggi": 60,
+      "panjang": 40,
+      "lebar": 38
+    },
+    "material": "tali dan besi hollow",
+    "harga": 850000,
+    "gambar": [
+      "06 kursi santai copy (200 x 191).jpg",
+      "06 kursi santai copy 02.png",
+      "06 kursi santai copy.png"
+    ]
+  },
+  {
+    "id": 7,
+    "nama": "Rak Lengkung",
+    "dimensi": {},
+    "material": null,
+    "harga": 650000,
+    "gambar": ["07 rak lengkung.png"]
+  },
+  {
+    "id": 8,
+    "nama": "Box Perhiasan Kecil",
+    "dimensi": {
+      "tinggi": 9.5,
+      "panjang": 8.5,
+      "lebar": 8.5
+    },
+    "material": null,
+    "harga": 60000,
+    "gambar": ["08 box kecil (6).png", "08 box kecil.png"]
+  },
+  {
+    "id": 9,
+    "nama": "Jam Lipat Kecil",
+    "dimensi": {
+      "tinggi": 7,
+      "panjang": 10,
+      "lebar": 2
+    },
+    "material": null,
+    "harga": 75000,
+    "gambar": ["09 jam meja lipat copy.png"]
+  },
+  {
+    "id": 10,
+    "nama": "Box Perhiasan Besar",
+    "dimensi": {
+      "tinggi": 10,
+      "panjang": 15.5,
+      "lebar": 15.5
+    },
+    "material": null,
+    "harga": 100000,
+    "gambar": ["10 box perhiasan.png", "10 box perhiasanterbuka.png"]
+  },
+  {
+    "id": 11,
+    "nama": "Tempat Pinsil",
+    "dimensi": {},
+    "material": null,
+    "harga": 100000,
+    "gambar": [
+      "11 pencil box 02.png",
+      "11 pencil box copy.png",
+      "11 pencil box.png"
+    ]
+  },
+  {
+    "id": 12,
+    "nama": "Kursi Lengkung Topi",
+    "dimensi": {
+      "tinggi": 42,
+      "panjang": 42,
+      "lebar": 38
+    },
+    "material": "hollow 1 x 3",
+    "harga": 100000,
+    "gambar": ["12 kursi papan lengkung.png", "12 kursi papan lengkung2.png"]
+  },
+  {
+    "id": 13,
+    "nama": "Jam Lipat Besar",
+    "dimensi": {
+      "tinggi": 14,
+      "panjang": 8.5,
+      "lebar": 2
+    },
+    "material": "jam, mdf",
+    "harga": 80000,
+    "gambar": [
+      "013 jam lipat besar (2).png",
+      "013 jam lipat besar (1).png",
+      "013 jam lipat besar (4).png"
+    ]
+  },
+  {
+    "id": 14,
+    "nama": "Meja Kotak Single",
+    "dimensi": {
+      "tinggi": 60,
+      "panjang": 38,
+      "lebar": 28
+    },
+    "material": "hollow 1 x 3",
+    "harga": 250000,
+    "gambar": ["14 rak single.png"]
+  },
+  {
+    "id": 15,
+    "nama": "Meja Kotak Double",
+    "dimensi": {},
+    "material": null,
+    "harga": 350000,
+    "gambar": ["15 rak kotak double.png"]
+  },
+  {
+    "id": 16,
+    "nama": "Stool Storage",
+    "dimensi": {},
+    "material": null,
+    "harga": 700000,
+    "gambar": ["16 storage stool.png"]
+  },
+  {
+    "id": 17,
+    "nama": "Tas Bonggol Jagung",
+    "dimensi": {},
+    "material": "Bambu Laminasi",
+    "harga": 380000,
+    "gambar": [
+      "17 tas bonggol jagung.png",
+      "17 tas bonggol jagung 2.png",
+      "17 tas bonggol jagung 3.png"
+    ]
+  },
+  {
+    "id": 18,
+    "nama": "Toples Bonggol Jagung",
+    "dimensi": {},
+    "material": null,
+    "harga": 225000,
+    "gambar": ["18 toples.png"]
+  },
+  {
+    "id": 19,
+    "nama": "Cangklong",
+    "dimensi": {},
+    "material": null,
+    "harga": 40000,
+    "gambar": ["19 cangklong.png"]
+  },
+  {
+    "id": 21,
+    "nama": "Tempat Bumbu",
+    "dimensi": {},
+    "material": null,
+    "harga": 120000,
+    "gambar": ["20 tempat bumbu.png"]
+  },
+  {
+    "id": 22,
+    "nama": "Kursi Bonggol Jati",
+    "dimensi": {},
+    "material": null,
+    "harga": 1300000,
+    "gambar": [
+      "21 kursi bonggol jati.png",
+      "21 kursi bonggol jati 02.png",
+      "21 kursi bonggol jati 03.png"
+    ]
+  },
+  {
+    "id": 23,
+    "nama": "Piring Bonggol Jagung",
+    "dimensi": {},
+    "material": null,
+    "harga": 120000,
+    "gambar": ["22 piring 02.png", "22 piring.png"]
+  },
+  {
+    "id": 24,
+    "nama": "Mainan Anak",
+    "dimensi": {},
+    "material": null,
+    "harga": 0,
+    "gambar": ["23 mainan anak.png"]
+  },
+  {
+    "id": 25,
+    "nama": "Kitchen Set",
+    "dimensi": {},
+    "material": "multiplek 9,5mm finishing duco",
+    "harga": {
+      "atas": 3000000,
+      "bawah": 3500000
+    },
+    "gambar": ["kitchen set.jpg"]
+  },
+  {
+    "id": 26,
+    "nama": "Elemen Asesoris Mebel",
+    "dimensi": {},
+    "material": null,
+    "harga": 100000,
+    "gambar": ["elemen asesoris mebel.jpg"]
+  },
+  {
+    "id": 27,
+    "nama": "Lampu Hias Manekin",
+    "dimensi": {},
+    "material": null,
+    "harga": 1200000,
+    "gambar": ["manekin lighting.png"]
+  }
+]
