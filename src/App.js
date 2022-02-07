@@ -159,243 +159,248 @@ function App() {
               </div>
             </div>
           </div>
-          <Transition appear show={isOpen} as={Fragment}>
-            <Dialog
-              as="div"
-              className="fixed inset-0 z-10 overflow-y-auto"
-              onClose={closeModal}
-            >
-              <div className="min-h-screen px-4 text-center">
-                <Transition.Child
-                  as={Fragment}
-                  enter="ease-out duration-300"
-                  enterFrom="opacity-0"
-                  enterTo="opacity-100"
-                  leave="ease-in duration-200"
-                  leaveFrom="opacity-100"
-                  leaveTo="opacity-0"
+          {Object.keys(modalContent).length !== 0 &&
+            modalContent.constructor === Object && (
+              <Transition appear show={isOpen} as={Fragment}>
+                <Dialog
+                  as="div"
+                  className="fixed inset-0 z-10 overflow-y-auto"
+                  onClose={closeModal}
                 >
-                  <Dialog.Overlay className="fixed inset-0" />
-                </Transition.Child>
-
-                {/* This element is to trick the browser into centering the modal contents. */}
-                <span
-                  className="inline-block h-screen align-middle"
-                  aria-hidden="true"
-                >
-                  &#8203;
-                </span>
-                <Transition.Child
-                  as={Fragment}
-                  enter="ease-out duration-300"
-                  enterFrom="opacity-0 scale-95"
-                  enterTo="opacity-100 scale-100"
-                  leave="ease-in duration-200"
-                  leaveFrom="opacity-100 scale-100"
-                  leaveTo="opacity-0 scale-95"
-                >
-                  <div className="inline-block w-full max-w-xl md:max-w-2xl lg:max-w-7xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
-                    <Dialog.Title
-                      as="h3"
-                      className="text-lg font-medium leading-6 text-gray-900"
+                  <div className="min-h-screen px-4 text-center">
+                    <Transition.Child
+                      as={Fragment}
+                      enter="ease-out duration-300"
+                      enterFrom="opacity-0"
+                      enterTo="opacity-100"
+                      leave="ease-in duration-200"
+                      leaveFrom="opacity-100"
+                      leaveTo="opacity-0"
                     >
-                      Detail Koleksi
-                    </Dialog.Title>
-                    <div className="mt-2">
-                      <h2 className="text-4xl font-extrabold text-gray-900 my-3 text-center">
-                        {modalContent.nama}
-                      </h2>
-                      <p className="text-lg text-gray-500">
-                        Berikut ini adalah deskripsi produk dari{" "}
-                        {modalContent.nama}
-                      </p>
-                      <div className="my-10 grid grid-cols-1 gap-6">
-                        <div className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 hover:cursor-pointer">
-                          <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
-                            <svg
-                              width="48"
-                              height="48"
-                              viewBox="0 0 48 48"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <rect
-                                width="48"
-                                height="48"
-                                rx="8"
-                                fill="#FFEDD5"
-                              />
-                              <path
-                                d="M24 11L35.2583 17.5V30.5L24 37L12.7417 30.5V17.5L24 11Z"
-                                stroke="#FB923C"
-                                strokeWidth="2"
-                              />
-                              <path
-                                fillRule="evenodd"
-                                clipRule="evenodd"
-                                d="M16.7417 19.8094V28.1906L24 32.3812L31.2584 28.1906V19.8094L24 15.6188L16.7417 19.8094Z"
-                                stroke="#FDBA74"
-                                strokeWidth="2"
-                              />
-                              <path
-                                fillRule="evenodd"
-                                clipRule="evenodd"
-                                d="M20.7417 22.1196V25.882L24 27.7632L27.2584 25.882V22.1196L24 20.2384L20.7417 22.1196Z"
-                                stroke="#FDBA74"
-                                strokeWidth="2"
-                              />
-                            </svg>
-                          </div>
-                          <div className="ml-4">
-                            <p className="text-sm font-medium text-gray-900">
-                              Dimensi
-                            </p>
-                            <p className="text-sm text-gray-500">
-                              {Object.keys(modalContent.dimensi).length === 0
-                                ? `Tidak ada keterangan`
-                                : `${modalContent.dimensi.tinggi}cm x ${modalContent.dimensi.panjang}cm x ${modalContent.dimensi.lebar}cm `}
-                            </p>
+                      <Dialog.Overlay className="fixed inset-0" />
+                    </Transition.Child>
+
+                    {/* This element is to trick the browser into centering the modal contents. */}
+                    <span
+                      className="inline-block h-screen align-middle"
+                      aria-hidden="true"
+                    >
+                      &#8203;
+                    </span>
+                    <Transition.Child
+                      as={Fragment}
+                      enter="ease-out duration-300"
+                      enterFrom="opacity-0 scale-95"
+                      enterTo="opacity-100 scale-100"
+                      leave="ease-in duration-200"
+                      leaveFrom="opacity-100 scale-100"
+                      leaveTo="opacity-0 scale-95"
+                    >
+                      <div className="inline-block w-full max-w-xl md:max-w-2xl lg:max-w-7xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+                        <Dialog.Title
+                          as="h3"
+                          className="text-lg font-medium leading-6 text-gray-900"
+                        >
+                          Detail Koleksi
+                        </Dialog.Title>
+                        <div className="mt-2">
+                          <h2 className="text-4xl font-extrabold text-gray-900 my-3 text-center">
+                            {modalContent.nama}
+                          </h2>
+                          <p className="text-lg text-gray-500">
+                            Berikut ini adalah deskripsi produk dari{" "}
+                            {modalContent.nama}
+                          </p>
+                          <div className="my-10 grid grid-cols-1 gap-6">
+                            <div className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 hover:cursor-pointer">
+                              <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
+                                <svg
+                                  width="48"
+                                  height="48"
+                                  viewBox="0 0 48 48"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <rect
+                                    width="48"
+                                    height="48"
+                                    rx="8"
+                                    fill="#FFEDD5"
+                                  />
+                                  <path
+                                    d="M24 11L35.2583 17.5V30.5L24 37L12.7417 30.5V17.5L24 11Z"
+                                    stroke="#FB923C"
+                                    strokeWidth="2"
+                                  />
+                                  <path
+                                    fillRule="evenodd"
+                                    clipRule="evenodd"
+                                    d="M16.7417 19.8094V28.1906L24 32.3812L31.2584 28.1906V19.8094L24 15.6188L16.7417 19.8094Z"
+                                    stroke="#FDBA74"
+                                    strokeWidth="2"
+                                  />
+                                  <path
+                                    fillRule="evenodd"
+                                    clipRule="evenodd"
+                                    d="M20.7417 22.1196V25.882L24 27.7632L27.2584 25.882V22.1196L24 20.2384L20.7417 22.1196Z"
+                                    stroke="#FDBA74"
+                                    strokeWidth="2"
+                                  />
+                                </svg>
+                              </div>
+                              <div className="ml-4">
+                                <p className="text-sm font-medium text-gray-900">
+                                  Dimensi
+                                </p>
+                                <p className="text-sm text-gray-500">
+                                  {Object.keys(modalContent.dimensi).length ===
+                                  0
+                                    ? `Tidak ada keterangan`
+                                    : `${modalContent.dimensi.tinggi}cm x ${modalContent.dimensi.panjang}cm x ${modalContent.dimensi.lebar}cm `}
+                                </p>
+                              </div>
+                            </div>
+                            <div className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 hover:cursor-pointer">
+                              <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
+                                <svg
+                                  width="48"
+                                  height="48"
+                                  viewBox="0 0 48 48"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <rect
+                                    width="48"
+                                    height="48"
+                                    rx="8"
+                                    fill="#FFEDD5"
+                                  />
+                                  <path
+                                    d="M28.0413 20L23.9998 13L19.9585 20M32.0828 27.0001L36.1242 34H28.0415M19.9585 34H11.8755L15.9171 27"
+                                    stroke="#FB923C"
+                                    strokeWidth="2"
+                                  />
+                                  <path
+                                    fillRule="evenodd"
+                                    clipRule="evenodd"
+                                    d="M18.804 30H29.1963L24.0001 21L18.804 30Z"
+                                    stroke="#FDBA74"
+                                    strokeWidth="2"
+                                  />
+                                </svg>
+                              </div>
+                              <div className="ml-4">
+                                <p className="text-sm font-medium text-gray-900">
+                                  Material
+                                </p>
+                                <p className="text-sm text-gray-500">
+                                  {modalContent.material === null
+                                    ? `Tidak ada keterangan`
+                                    : modalContent.material}
+                                </p>
+                              </div>
+                            </div>
+                            <div className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 hover:cursor-pointer">
+                              <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
+                                <svg
+                                  width="48"
+                                  height="48"
+                                  viewBox="0 0 48 48"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <rect
+                                    width="48"
+                                    height="48"
+                                    rx="8"
+                                    fill="#FFEDD5"
+                                  />
+                                  <rect
+                                    x="13"
+                                    y="32"
+                                    width="2"
+                                    height="4"
+                                    fill="#FDBA74"
+                                  />
+                                  <rect
+                                    x="17"
+                                    y="28"
+                                    width="2"
+                                    height="8"
+                                    fill="#FDBA74"
+                                  />
+                                  <rect
+                                    x="21"
+                                    y="24"
+                                    width="2"
+                                    height="12"
+                                    fill="#FDBA74"
+                                  />
+                                  <rect
+                                    x="25"
+                                    y="20"
+                                    width="2"
+                                    height="16"
+                                    fill="#FDBA74"
+                                  />
+                                  <rect
+                                    x="29"
+                                    y="16"
+                                    width="2"
+                                    height="20"
+                                    fill="#FB923C"
+                                  />
+                                  <rect
+                                    x="33"
+                                    y="12"
+                                    width="2"
+                                    height="24"
+                                    fill="#FB923C"
+                                  />
+                                </svg>
+                              </div>
+                              <div className="ml-4">
+                                <p className="text-sm font-medium text-gray-900">
+                                  Harga
+                                </p>
+                                <p className="text-sm text-gray-500">
+                                  {`Rp${modalContent.harga}`}
+                                </p>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 hover:cursor-pointer">
-                          <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
-                            <svg
-                              width="48"
-                              height="48"
-                              viewBox="0 0 48 48"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
+                        <div className="mt-6 flex justify-center gap-3 md:gap-5">
+                          {modalContent.gambar.map((g, i) => (
+                            <div
+                              className="w-60 max-h-60 bg-gray-200 rounded-md overflow-hidden group-hover:opacity-75 lg:w-96 lg:max-h-96"
+                              key={i}
                             >
-                              <rect
-                                width="48"
-                                height="48"
-                                rx="8"
-                                fill="#FFEDD5"
+                              <img
+                                src={`/furnitur/${g}`}
+                                alt={g}
+                                className="w-full h-full object-center object-cover lg:w-full lg:h-full"
                               />
-                              <path
-                                d="M28.0413 20L23.9998 13L19.9585 20M32.0828 27.0001L36.1242 34H28.0415M19.9585 34H11.8755L15.9171 27"
-                                stroke="#FB923C"
-                                strokeWidth="2"
-                              />
-                              <path
-                                fillRule="evenodd"
-                                clipRule="evenodd"
-                                d="M18.804 30H29.1963L24.0001 21L18.804 30Z"
-                                stroke="#FDBA74"
-                                strokeWidth="2"
-                              />
-                            </svg>
-                          </div>
-                          <div className="ml-4">
-                            <p className="text-sm font-medium text-gray-900">
-                              Material
-                            </p>
-                            <p className="text-sm text-gray-500">
-                              {modalContent.material === null
-                                ? `Tidak ada keterangan`
-                                : modalContent.material}
-                            </p>
-                          </div>
+                            </div>
+                          ))}
                         </div>
-                        <div className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 hover:cursor-pointer">
-                          <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
-                            <svg
-                              width="48"
-                              height="48"
-                              viewBox="0 0 48 48"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <rect
-                                width="48"
-                                height="48"
-                                rx="8"
-                                fill="#FFEDD5"
-                              />
-                              <rect
-                                x="13"
-                                y="32"
-                                width="2"
-                                height="4"
-                                fill="#FDBA74"
-                              />
-                              <rect
-                                x="17"
-                                y="28"
-                                width="2"
-                                height="8"
-                                fill="#FDBA74"
-                              />
-                              <rect
-                                x="21"
-                                y="24"
-                                width="2"
-                                height="12"
-                                fill="#FDBA74"
-                              />
-                              <rect
-                                x="25"
-                                y="20"
-                                width="2"
-                                height="16"
-                                fill="#FDBA74"
-                              />
-                              <rect
-                                x="29"
-                                y="16"
-                                width="2"
-                                height="20"
-                                fill="#FB923C"
-                              />
-                              <rect
-                                x="33"
-                                y="12"
-                                width="2"
-                                height="24"
-                                fill="#FB923C"
-                              />
-                            </svg>
-                          </div>
-                          <div className="ml-4">
-                            <p className="text-sm font-medium text-gray-900">
-                              Harga
-                            </p>
-                            <p className="text-sm text-gray-500">
-                              {`Rp${modalContent.harga}`}
-                            </p>
-                          </div>
+
+                        <div className="mt-4">
+                          <button
+                            type="button"
+                            className="inline-flex justify-center px-4 py-2 text-sm font-medium text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+                            onClick={closeModal}
+                          >
+                            Close
+                          </button>
                         </div>
                       </div>
-                    </div>
-                    <div className="mt-6 flex justify-center gap-3 md:gap-5">
-                      {modalContent.gambar.map((g, i) => (
-                        <div
-                          className="w-60 max-h-60 bg-gray-200 rounded-md overflow-hidden group-hover:opacity-75 lg:w-96 lg:max-h-96"
-                          key={i}
-                        >
-                          <img
-                            src={`/furnitur/${g}`}
-                            alt={g}
-                            className="w-full h-full object-center object-cover lg:w-full lg:h-full"
-                          />
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="mt-4">
-                      <button
-                        type="button"
-                        className="inline-flex justify-center px-4 py-2 text-sm font-medium text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
-                        onClick={closeModal}
-                      >
-                        Close
-                      </button>
-                    </div>
+                    </Transition.Child>
                   </div>
-                </Transition.Child>
-              </div>
-            </Dialog>
-          </Transition>
+                </Dialog>
+              </Transition>
+            )}
+
           <div className="w-full pt-16 pb-6 text-sm text-center md:text-left fade-in">
             &copy; Matahati {tahun}{" "}
             <a
