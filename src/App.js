@@ -364,7 +364,19 @@ function App() {
                                   Harga
                                 </p>
                                 <p className="text-sm text-gray-500">
-                                  {`Rp${modalContent.harga}`}
+                                  {Object.keys(modalContent.harga).length ===
+                                  0 ? (
+                                    `Rp${modalContent.harga}`
+                                  ) : (
+                                    <ul>
+                                      <li>
+                                        Atas : Rp{modalContent.harga.atas}
+                                      </li>
+                                      <li>
+                                        Bawah : Rp{modalContent.harga.bawah}
+                                      </li>
+                                    </ul>
+                                  )}
                                 </p>
                               </div>
                             </div>
